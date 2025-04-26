@@ -1,0 +1,92 @@
+{
+  // smoothScrolling
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  // security
+  "security.workspace.trust.untrustedFiles": "open",
+  // workbench
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.editor.wrapTabs": true,
+  "workbench.view.alwaysShowHeaderActions": true,
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#2D2C57",
+    "tab.activeForeground": "#ffffff",
+    "tab.inactiveForeground": "#ffffff"
+  },
+  // editor
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.dragAndDrop": false,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.showFoldingControls": "always",
+  // "editor.minimap.enabled": false,
+  "editor.minimap.maxColumn": 60,
+  "editor.minimap.showSlider": "always",
+  "editor.rulers": [
+    80,
+    120,
+    160,
+    200
+  ],
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?　、。！？「」【】『』（）",
+  // "editor.guides.bracketPairs": true,
+  // "editor.matchBrackets": "always",
+  "editor.renderLineHighlight": "all",
+  "editor.mouseWheelZoom": true,
+  // ファイルサイズに関係なく通常通りすべてのエディター機能を使えるようにする
+  "editor.largeFileOptimizations": false,
+  // files
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.autoGuessEncoding": true,
+  "files.eol": "\n",
+  // explorer
+  "explorer.compactFolders": false,
+  // search
+  "search.showLineNumbers": true,
+  // git
+  "git.suggestSmartCommit": false,
+  "git.openRepositoryInParentFolders": "never",
+  "scm.defaultViewMode": "tree",
+  // terminal
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.enableImages": true,
+  "terminal.integrated.mouseWheelZoom": true,
+  // debug
+  // "debug.inlineValues": true,
+  // 言語ごとの設定
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true
+  },
+  "rubyLsp.rubyVersionManager": "rbenv",
+  "rubyLsp.formatter": "standard",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[log]": {
+    "editor.wordWrap": "off"
+  },
+  // 拡張機能
+  "markdown-preview-enhanced.enablePreviewZenMode": false,
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  "workbench.iconTheme": "material-icon-theme",
+  "prettier.printWidth": 80,
+  // "diffEditor.experimental.useTrueInlineView": true,
+}
