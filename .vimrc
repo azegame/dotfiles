@@ -1,5 +1,8 @@
-" カラースキーム
-colorscheme molokai
+" ダーク背景に固定
+set background=dark
+" カラースキーム適用
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'medium'
 
 " 行番号を表示
 set number
