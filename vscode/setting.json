@@ -1,32 +1,43 @@
 {
+  // "diffEditor.experimental.useTrueInlineView": true,
+  "diffEditor.renderSideBySide": false,
+  // diffEditor.ignoreTrimWhitespaceがtrueのときに、空白行の差分を無視する
+  "diffEditor.ignoreTrimWhitespace": false,
   // smoothScrolling
   "workbench.list.smoothScrolling": true,
   "editor.smoothScrolling": true,
   "terminal.integrated.smoothScrolling": true,
   // security
   "security.workspace.trust.untrustedFiles": "open",
-  // workbench
-  "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabsOnSeparateRow": true,
   "workbench.editor.wrapTabs": true,
   "workbench.view.alwaysShowHeaderActions": true,
+  "workbench.editor.enablePreview": false,
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#2D2C57",
     "tab.activeForeground": "#ffffff",
     "tab.inactiveForeground": "#ffffff"
   },
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
   // editor
   "editor.fontSize": 14,
   "editor.tabSize": 2,
-  "editor.wordWrap": "wordWrapColumn",
+  "editor.detectIndentation": false, // #editor.tabSize# と #editor.insertSpaces# を自動的に検出するかどうか
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "off",
+  // "editor.wordWrap": "on",
+  // "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
   "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.formatOnPaste": true,
-  "editor.dragAndDrop": false,
+  // "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
   "editor.showFoldingControls": "always",
-  // "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 60,
   "editor.minimap.showSlider": "always",
   "editor.rulers": [
@@ -36,7 +47,7 @@
     200
   ],
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?　、。！？「」【】『』（）",
-  // "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairs": true,
   // "editor.matchBrackets": "always",
   "editor.renderLineHighlight": "all",
   "editor.mouseWheelZoom": true,
@@ -47,8 +58,11 @@
   "files.trimFinalNewlines": true,
   "files.autoGuessEncoding": true,
   "files.eol": "\n",
+  // "files.trimTrailingWhitespace": true,
+  "files.trimTrailingWhitespace": false,
   // explorer
   "explorer.compactFolders": false,
+  "explorer.autoReveal": false,
   // search
   "search.showLineNumbers": true,
   // git
@@ -56,37 +70,105 @@
   "git.openRepositoryInParentFolders": "never",
   "scm.defaultViewMode": "tree",
   // terminal
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.enableImages": true,
   "terminal.integrated.mouseWheelZoom": true,
   // debug
   // "debug.inlineValues": true,
   // 言語ごとの設定
-  "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
-    "editor.formatOnSave": true,
-    "editor.insertSpaces": true
-  },
-  "rubyLsp.rubyVersionManager": "rbenv",
-  "rubyLsp.formatter": "standard",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.codeActionsOnSave": {
+    //   "source.organizeImports": "explicit"
+    // }
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.codeActionsOnSave": {
+    //   "source.organizeImports": "explicit"
+    // }
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "[json][jsonc]": {
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[log]": {
     "editor.wordWrap": "off"
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[scss]": {
+    "editor.suggest.insertMode": "replace",
+    "cSpell.fixSpellingWithRenameProvider": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+  },
+  "rubyLsp.formatter": "rubocop",
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+  },
+  "vscode-erb-beautify.keepBlankLines": 1,
   // 拡張機能
   "markdown-preview-enhanced.enablePreviewZenMode": false,
   "markdown-preview-enhanced.previewTheme": "atom-dark.css",
   "workbench.iconTheme": "material-icon-theme",
   "prettier.printWidth": 80,
-  // "diffEditor.experimental.useTrueInlineView": true,
+  "cSpell.userWords": [
+    "actionpack",
+    "activerecord",
+    "bluegrey",
+    "deeppurple",
+    "informations",
+    "jbuilder",
+    "JOBSITE",
+    "Kaku",
+    "lightgreen",
+    "manaby",
+    "omakase",
+    "pids",
+    "plpgsql",
+    "postalcode",
+    "railties",
+    "rubocop",
+    "sendfile",
+    "shigoto",
+    "sidekiq",
+    "sonner",
+    "splide",
+    "splidejs",
+    "tmpfs",
+    "vercel",
+    "youtu",
+    "zeku"
+  ],
+  // Cursor
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.colorTheme": "Default Dark Modern",
+  "window.commandCenter": true,
+  // kokomade
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "svgPreview.autoOpen": false,
+  "svgPreview.scaleToFit": false,
 }
