@@ -4,14 +4,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 CURSOR_SET_DIR="${HOME}/Library/Application Support/Cursor/User"
 
 # Link settings.json
-if [ -L "${CURSOR_SET_DIR}/settings.json" ]; then
-  echo "Linking settings.json to cursor..."
-  ln -fsvn "${SCRIPT_DIR}/settings.json" "${CURSOR_SET_DIR}/settings.json"
-else
-echo "settings.json is not found."
-  echo ${CURSOR_SET_DIR}
-  exit 1
-fi
+echo "Linking settings.json to cursor..."
+ln -fsvn "${SCRIPT_DIR}/settings.json" "${CURSOR_SET_DIR}/settings.json"
 
 # Install extensions using the code command
 if command -v code >/dev/null 2>&1; then
