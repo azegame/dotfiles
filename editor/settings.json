@@ -170,5 +170,5 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "svgPreview.autoOpen": false,
-  "svgPreview.scaleToFit": false,
+  "svgPreview.scaleToFit": false
 }
