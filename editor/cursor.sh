@@ -7,20 +7,20 @@ CURSOR_SET_DIR="${HOME}/Library/Application Support/Cursor/User"
 echo "Linking settings.json to cursor..."
 ln -fsvn "${SCRIPT_DIR}/settings.json" "${CURSOR_SET_DIR}/settings.json"
 
-# Install extensions using the code command
-if command -v code >/dev/null 2>&1; then
+# Install extensions using the cursor command
+if command -v cursor >/dev/null 2>&1; then
   echo "Installing extensions..."
 
-  installed=$(code --list-extensions)
+  installed=$(cursor --list-extensions)
 
   cat "${SCRIPT_DIR}/extensions" | while read -r ext; do
     if ! echo "$installed" | grep -qx "$ext"; then
       echo "Installing $ext..."
-      code --install-extension "$ext"
+      cursor --install-extension "$ext"
     else
       echo "$ext is already installed, skipping."
     fi
   done
 else
-  echo "Code command not found."
+  echo "cursor command not found."
 fi
