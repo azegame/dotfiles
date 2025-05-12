@@ -5,9 +5,14 @@ eval "$(rbenv init -)"
 #PostgreSQL
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 
-# PATH
-#export PATH=$HOME/.nodebrew/current/bin:$PATH
+# Node.js
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# homebrewでインストールした Node.js v20（不要）
 #export PATH="/usr/local/opt/node@20/bin:$PATH"
+
 
 # git-prompt.sh
 # addされていない変更を「*」commitされていない変更を「+」で示す
