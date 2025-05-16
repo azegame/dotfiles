@@ -18,6 +18,7 @@
     "tab.activeForeground": "#ffffff",
     "tab.inactiveForeground": "#ffffff"
   },
+  // どのエディタで開くか（例：SVGはデフォルトビューアを使う）
   "workbench.editorAssociations": {
     "*.svg": "default"
   },
@@ -60,6 +61,10 @@
   "files.eol": "\n",
   // "files.trimTrailingWhitespace": true,
   "files.trimTrailingWhitespace": false,
+  "files.associations": {
+    "*.vimrc": "viml",
+    "*.vim": "viml"
+  },
   // explorer
   "explorer.compactFolders": false,
   "explorer.autoReveal": false,
@@ -170,5 +175,7 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "svgPreview.autoOpen": false,
-  "svgPreview.scaleToFit": false
+  "svgPreview.scaleToFit": false,
+  // VSCodeVim 拡張をデフォルトで無効化
+  "vim.disableExtension": true
 }
