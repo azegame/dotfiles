@@ -1,8 +1,23 @@
-" ダーク背景に固定
-set background=dark
+" vim-plug がなければ取得してくる
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs '
+        \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" プラグイン定義
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'preservim/vim-indent-guides'
+call plug#end()
+
+" 起動時に自動で有効化
+let g:indent_guides_enable_on_vim_startup = 1
+
 " カラースキーム適用
-colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'medium'
+set background=dark
+colorscheme gruvbox
 
 " 行番号を表示
 set number
@@ -26,6 +41,8 @@ set smartindent
 set noswapfile
 " ステータスバー常に表示
 set laststatus=2
+" 非表示文字を可視化する
+set list
 
 "----------------------------------------
 " 検索
