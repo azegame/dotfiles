@@ -13,7 +13,6 @@ export NVM_DIR="$HOME/.nvm"
 # homebrewでインストールした Node.js v20（不要）
 #export PATH="/usr/local/opt/node@20/bin:$PATH"
 
-
 # git-prompt.sh
 # addされていない変更を「*」commitされていない変更を「+」で示す
 GIT_PS1_SHOWDIRTYSTATE=true
@@ -31,7 +30,7 @@ function set_branch_info() {
   local branch=$(__git_ps1 "(%s)")
   if [[ -n "$branch" ]]; then
     # ブランチ情報があるときのみ、先頭にスペースを含めて返す
-    echo " $(git_color)${branch}" 
+    echo " $(git_color)${branch}"
   fi
 }
 
@@ -52,12 +51,24 @@ function git_color() {
 setopt PROMPT_SUBST
 PS1='%F{green}%n@%m%f %F{magenta}%c%f$(set_branch_info) %F{green}%%%f '
 
-# alias 
-alias ls='ls -G'
-alias ll='ls -lG'
-alias la='ls -laG'
+# alias
+alias ll='ls -laG'
 
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 autoload -Uz compinit
 compinit
+
+# ヒストリの設定
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
+# 直前のコマンドと同じものは記録しない（連続重複を無視）
+setopt hist_ignore_dups
+
+# 履歴全体から重複コマンドを削除し、常に最新の１回だけを残す
+setopt hist_ignore_all_dups
+
+# コマンド実行後すぐに、その１行だけを履歴ファイルに追記する
+setopt inc_append_history
