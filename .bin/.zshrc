@@ -2,6 +2,16 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+export LC_CTYPE=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
+
+# MySQL
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/mysql@8.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.0/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.0/lib/pkgconfig"
+
 #PostgreSQL
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 
@@ -13,13 +23,25 @@ export NVM_DIR="$HOME/.nvm"
 # homebrewでインストールした Node.js v20（不要）
 #export PATH="/usr/local/opt/node@20/bin:$PATH"
 
+################################################################################
+
+function gitmain() {
+  git config --global user.name "azegame"
+  git config --global user.email "a.masashi218@gmail.com"
+}
+
+function gitrdev() {
+  git config --global user.name "m-azegami-rdev"
+  git config --global user.email "m-azegami@ruby-dev.jp"
+}
+
 # git-prompt.sh
 # addされていない変更を「*」commitされていない変更を「+」で示す
 GIT_PS1_SHOWDIRTYSTATE=true
 # addされていない新規ファイルの存在を「%」で示す
 GIT_PS1_SHOWUNTRACKEDFILES=true
 # stashがある場合は「$」で示す
-GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWSTASHSTATE=false
 # upstreamと同期「=」進んでいる「>」遅れている「<」で示す
 GIT_PS1_SHOWUPSTREAM=auto
 
@@ -49,7 +71,7 @@ function git_color() {
 
 # prompt
 setopt PROMPT_SUBST
-PS1='%F{green}%n@%m%f %F{magenta}%c%f$(set_branch_info) %F{green}%%%f '
+PS1='%F{green}%n%f%F{magenta}<`git config user.name`>%f%F{green}@%m%f %F{magenta}%c%f$(set_branch_info) %F{green}%%%f '
 
 # alias
 alias ll='ls -laG'

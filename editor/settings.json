@@ -32,7 +32,6 @@
   // "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 80,
   "editor.formatOnSave": true,
-  // "editor.formatOnSave": false,
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
   "editor.renderControlCharacters": true,
@@ -116,7 +115,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    // "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[scss]": {
     "editor.suggest.insertMode": "replace",
@@ -126,17 +125,24 @@
   "[ruby]": {
     "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": true,
-    "editor.insertSpaces": true,
+    "editor.insertSpaces": true
   },
   "rubyLsp.formatter": "rubocop",
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "rbenv"
+  },
   "[erb]": {
-    "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+    // "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
   },
   "vscode-erb-beautify.keepBlankLines": 1,
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   // 拡張機能
   "markdown-preview-enhanced.enablePreviewZenMode": false,
   "markdown-preview-enhanced.previewTheme": "atom-dark.css",
-  "workbench.iconTheme": "material-icon-theme",
   "prettier.printWidth": 80,
   "cSpell.userWords": [
     "actionpack",
@@ -177,5 +183,6 @@
   "svgPreview.autoOpen": false,
   "svgPreview.scaleToFit": false,
   // VSCodeVim 拡張をデフォルトで無効化
-  "vim.disableExtension": true
+  "vim.disableExtension": true,
+  "hediet.vscode-drawio.resizeImages": null
 }
